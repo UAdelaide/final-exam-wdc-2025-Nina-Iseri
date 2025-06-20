@@ -8,4 +8,4 @@ VALUES
 
 
 INSERT INTO Dogs (owner_id, name, size)
-SELECT user_id, 'Max', 'medium' 
+SELECT user_id, 'Max', 'medium' FROM Users Where 
