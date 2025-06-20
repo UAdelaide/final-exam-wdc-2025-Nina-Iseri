@@ -131,6 +131,8 @@ let db;
       `);
       await db.execute(`
         INSERT INTO WalkApplications (request_id, walker_id, status)
+        VALUES
+        ()
       `);
       await db.execute(`
         INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating)
