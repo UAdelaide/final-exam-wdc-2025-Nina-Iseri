@@ -148,6 +148,7 @@ app.get('/api/dogs', async (req, res) => {
 });
 
 // Route to return all open walk requests
+app.get('/api/walkrequests:status')
 
 app.use(express.static(path.join(__dirname, 'public')));
 
