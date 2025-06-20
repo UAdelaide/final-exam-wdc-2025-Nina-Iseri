@@ -5,5 +5,8 @@ createApp({
         return {
 
         };
+    },
+    methods: {
+        
     }
 }).mount("body");
