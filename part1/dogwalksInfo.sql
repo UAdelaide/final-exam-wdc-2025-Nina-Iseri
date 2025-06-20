@@ -36,15 +36,15 @@ VALUES
 
 
 
--- SELECT username AS walker_username, total_ratings, average_rating, completed_walks
---     FROM (
---         SELECT username, COUNT(rating) AS total_ratings, SUM(rating) / COUNT(rating) AS average_rating
---         FROM Users
---         INNER JOIN WalkRatings ON WalkRatings.walker_id = Users.user_id
---         GROUP BY username
---     ) sub1
---     INNER JOIN (
---         SELECT username, COUNT() AS completed_walks
---     ) sub2
---     WHERE sub1.username = sub2.username
+SELECT username AS walker_username, total_ratings, average_rating, completed_walks
+    FROM (
+        SELECT username, COUNT(rating) AS total_ratings, SUM(rating) / COUNT(rating) AS average_rating
+        FROM Users
+        INNER JOIN WalkRatings ON WalkRatings.walker_id = Users.user_id
+        GROUP BY username
+    ) sub1
+    INNER JOIN (
+        SELECT username, COUNT() AS completed_walks
+    ) sub2
+    WHERE sub1.username = sub2.username
 
