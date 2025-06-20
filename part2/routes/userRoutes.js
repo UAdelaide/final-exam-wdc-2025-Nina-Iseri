@@ -50,7 +50,8 @@ router.post('/login', async(req, res) => {
 
     // Store login status in session
     res.cookie('username', rows[0].username);
-    res.cookie('role', )
+    res.cookie('role', rows[0].role);
+    
     console.log(rows[0].role);
     res.json({message: 'Login successful', user: rows[0].username});
   } catch (err) {
