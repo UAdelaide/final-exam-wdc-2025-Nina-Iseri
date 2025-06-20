@@ -39,7 +39,7 @@ router.get('/me', (req, res) => {
 router.post('/login', async(req, res) => {
   const { user, pass } = req.body;
   const maxAge = 86400000;
-  const expiresAt = Date.now
+  const expiresAt = Date.now() + 
   try {
     // Check if user exists and password is correct
     const [rows] = await db.query(`
