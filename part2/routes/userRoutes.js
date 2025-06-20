@@ -55,7 +55,8 @@ router.post('/login', async(req, res) => {
 
     req.session.save();
     console.log(req.session);
-    console.log(res.cookie);
+
+    
     // Redirect to page according to role
     // res.redirect('http://localhost:8080/owner-dashboard.html');
 
