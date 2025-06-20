@@ -130,7 +130,7 @@ let db;
         SELECT dog_id, '2025-06-12 12:00:00', '15', 'Hub Central', 'cancelled' FROM Dogs WHERE name = 'Max'
       `);
       await db.execute(`
-        INSERT INTO Wal
+        INSERT INTO WalkRatings ()
       `)
     } catch (err) {
       console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
