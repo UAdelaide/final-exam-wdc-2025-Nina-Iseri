@@ -8,10 +8,11 @@ a {
 }
 
 h1 {
-  
+
 }
 
 section {
+  text-align: center;
   width: 600px;
   margin: auto;
 }
