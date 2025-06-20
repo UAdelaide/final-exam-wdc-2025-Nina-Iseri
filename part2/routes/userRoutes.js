@@ -37,8 +37,9 @@ router.get('/me', (req, res) => {
 
 // POST login
 router.post('/login', async(req, res) => {
-  const { user } = req.body;
+  const { user, pass } = req.body;
   console.log(user);
+  console.log(pass);
   try {
     const [rows] = await db.query(`
       SELECT user_id, username, role FROM Users
