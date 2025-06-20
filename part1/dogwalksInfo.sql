@@ -38,13 +38,13 @@ VALUES
 
 SELECT user_name AS walker_username, total_ratings, average_rating, completed_walks
     FROM (
-        SELECT username AS user_name, COUNT(rating) AS total_ratings, SUM(rating) / COUNT(rating) AS average_rating
+        SELECT user_id, COUNT(rating) AS total_ratings, SUM(rating) / COUNT(rating) AS average_rating
         FROM Users
         LEFT OUTER JOIN WalkRatings ON WalkRatings.walker_id = Users.user_id
         WHERE role = 'walker'
         GROUP BY username
     ) sub1
-    INNER JOIN (
+    LEFT OUTER JOIN (
         SELECT walker_id, COUNT(*) AS completed_walks
         FROM WalkRequests
         INNER JOIN WalkApplications ON WalkApplications.request_id = WalkRequests.request_id
