@@ -152,11 +152,10 @@ app.get('/api/walkrequests/:status', async (req, res) => {
     let status = req.params.status || '';
     if (status != 'open') {
         return res.status(400).json({ error: 'Invalid walkrequest status'});
-        return;
     }
     try {
         const [walk_requests] = await db.execute(`
-
+            SELECT 
 
         `);
         res.json(walk_requests);
