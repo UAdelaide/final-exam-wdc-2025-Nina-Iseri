@@ -36,7 +36,7 @@ VALUES
 
 
 
-SELECT username AS walker_username, total_ratings, average_rating, completed_walks
+SELECT user_id AS walker_username, total_ratings, average_rating, completed_walks
     FROM (
         SELECT user_id, COUNT(rating) AS total_ratings, SUM(rating) / COUNT(rating) AS average_rating
         FROM Users
@@ -56,5 +56,5 @@ SELECT username AS walker_username, total_ratings, average_rating, completed_wal
         RIGHT OUTER JOIN Users ON Users.user_id = sub.walker_id
         WHERE role = 'walker'
     ) sub2
-    ON sub1.username = sub2.username;
+    ON sub1.user_id = sub2.user_id;
 
