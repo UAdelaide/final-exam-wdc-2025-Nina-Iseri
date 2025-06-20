@@ -1,1 +1,5 @@
-const { createApp } = 
+const { createApp } = Vue;
+
+createApp({
+
+});
