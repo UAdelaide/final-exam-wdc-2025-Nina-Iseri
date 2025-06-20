@@ -51,6 +51,7 @@ SELECT username AS walker_username, total_ratings, average_rating, completed_wal
             FROM WalkRequests
             INNER JOIN WalkApplications ON WalkApplications.request_id = WalkRequests.request_id
             WHERE WalkApplications.status = 'accepted' && WalkRequests.status = 'completed'
+            GROUP BY walker_id
         ) sub
         RIGHT OUTER JOIN Users ON Users.user_id = sub.walker_id
         WHERE role = 'walker'
