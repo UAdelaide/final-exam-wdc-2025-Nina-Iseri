@@ -49,7 +49,7 @@ router.post('/login', async(req, res) => {
     }
 
     res.json({message: 'Login successful', user: rows[0].username});
-  }
+  } catch (err) {}
 });
 
 // POST login (dummy version)
