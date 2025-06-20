@@ -129,6 +129,9 @@ let db;
         SELECT dog_id, '2025-06-11 10:00:00', '60', 'Rundle St', 'accepted' FROM Dogs WHERE name = 'Frank' UNION ALL
         SELECT dog_id, '2025-06-12 12:00:00', '15', 'Hub Central', 'cancelled' FROM Dogs WHERE name = 'Max'
       `);
+      await db.execute(`
+        INSERT INTO 
+      `)
     } catch (err) {
       console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
     }
@@ -171,7 +174,7 @@ app.get('/api/walkrequests/:status', async (req, res) => {
 app.get('/api/walkers/summary', async (req, res) => {
     try {
         const [summaries] = await db.execute(`
-            
+
         `);
     }
 });
