@@ -22,4 +22,4 @@ createApp({
             console.error("Unable to fetch dog image");
         }
     }
-}).mount("body");
+}).mount('body');
