@@ -44,7 +44,7 @@ SELECT username AS walker_username, total_ratings, average_rating, completed_wal
         WHERE role = 'walker'
         GROUP BY username
     ) sub1
-    LEFT OUTER JOIN (
+    INNER JOIN (
         SELECT username, IFNULL(completed_walks, 0)
         FROM (
             SELECT walker_id, COUNT(*) AS completed_walks
