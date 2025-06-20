@@ -163,7 +163,7 @@ app.get('/api/walkrequests/:status', async (req, res) => {
         `);
         res.json(walk_requests);
     } catch (err) {
-        res.status(500).json({ error: 'Failed to fetch '});
+        res.status(500).json({ error: 'Failed to fetch open walkrequests'});
     }
 });
 
