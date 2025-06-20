@@ -12,6 +12,8 @@ createApp({
         };
     },
     async created() {
-        try 
+        try {
+            await fetch("")
+        }
     }
 }).mount("body");
