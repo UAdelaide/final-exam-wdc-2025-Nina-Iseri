@@ -179,8 +179,9 @@ app.get('/api/walkers/summary', async (req, res) => {
         const [summaries] = await db.execute(`
             SELECT username AS walker_username, COUNT (*) AS total_ratings, SUM (*) / COUNT (*) AS average_ratings,
         `);
+        res.json(summaries);
     } catch (err) {
-        res.status(500).json({ error: 'Failed to fetch walker summar'})
+        res.status(500).json({ error: 'Failed to fetch walker summary'});
     }
 });
 
