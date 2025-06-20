@@ -155,7 +155,7 @@ app.get('/api/walkrequests/:status', async (req, res) => {
     }
     try {
         const [walk_requests] = await db.execute(`
-            SELECT request_id, name AS dog_name, 
+            SELECT request_id, name AS dog_name, requested_time, duration_minutes, location, username AS 
 
         `);
         res.json(walk_requests);
