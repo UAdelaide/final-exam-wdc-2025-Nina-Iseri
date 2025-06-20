@@ -14,6 +14,7 @@ createApp({
     async created() {
         try {
             await fetch("https://dog.ceo/api/breeds/image/random")
+            .then(res)
         }
     }
 }).mount("body");
