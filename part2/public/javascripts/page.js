@@ -189,7 +189,7 @@ function login(){
         if (this.readyState == 4 && this.status == 200) {
             console.log("Welcome "+this.responseText);
         } else if (this.readyState == 4 && this.status >= 400) {
-            alert("Login failed");
+           console.log("Login failed");
         }
     };
 
