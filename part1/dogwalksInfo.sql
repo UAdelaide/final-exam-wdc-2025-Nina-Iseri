@@ -36,7 +36,7 @@ VALUES
 
 
 
-SELECT username AS walker_username, total_ratings, average_rating, completed_walks
+SELECT user_name AS walker_username, total_ratings, average_rating, completed_walks
     FROM (
         SELECT username AS user_name, COUNT(rating) AS total_ratings, SUM(rating) / COUNT(rating) AS average_rating
         FROM Users
