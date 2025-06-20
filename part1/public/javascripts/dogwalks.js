@@ -20,6 +20,7 @@ createApp({
             .then((res) => res.json)
             .then((data) => {
                 this.dog_of_the_day.imageUrl = data.message;
+                alert("zhen tryle");
             });
         } catch (err) {
             console.error("Unable to fetch dog image");
