@@ -28,6 +28,12 @@ VALUES
 (5, 2, 'accepted');
 
 
+INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating)
+VALUES
+(4, 2, 1, 5),
+(5, 2, 1, 4);
+
+
 
 SELECT username AS walker_username, total_ratings, average_rating, completed_walks
     FROM (
