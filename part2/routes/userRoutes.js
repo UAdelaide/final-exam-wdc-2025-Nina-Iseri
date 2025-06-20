@@ -56,9 +56,9 @@ router.post('/login', async(req, res) => {
     req.session.user_id = rows[0].user_id;
 
     req.session.save();
-    console.log(req.session);
+    // console.log(req.session);/
 
-    res.json({ message: 'Login successful', user: rows[0] });
+    res.json({ message: 'Login successful', user: rows[0].userm });
   } catch (err) {
     res.status(500).json({error: 'Login failed'});
   }
