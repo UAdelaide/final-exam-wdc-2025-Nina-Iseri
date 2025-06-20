@@ -11,8 +11,8 @@ app.use(session({
     secret: '',
     resave: false,
     saveUninitialized: true,
-    cookie: {}
-}))
+    cookie: { maxAge: 864000 }
+}));
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
