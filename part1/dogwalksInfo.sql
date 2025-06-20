@@ -7,4 +7,4 @@ VALUES
 ('Alan', 'alan@example.com', 'faded11', 'walker');
 
 
-INSERT INTO 
+INSERT INTO Dogs ()
