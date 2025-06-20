@@ -130,7 +130,7 @@ let db;
         SELECT dog_id, '2025-06-12 12:00:00', '15', 'Hub Central', 'cancelled' FROM Dogs WHERE name = 'Max'
       `);
       await db.execute(`
-        INSERT INTO WalkApplications ()
+        INSERT INTO WalkApplications (request_id, walker_id, status)
       `);
       await db.execute(`
         INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating)
