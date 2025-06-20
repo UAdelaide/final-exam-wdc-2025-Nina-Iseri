@@ -47,12 +47,11 @@ router.post('/login', async(req, res) => {
     if (rows.length === 0) {
       return res.status(401).json({error: 'Invalid credentials'});
     }
-    console.log(rows[0]);
+    console.log(rows[0].user_id);
     // Store login status in session
     res.cookie('username', rows[0].username);
     res.cookie('role', rows[0].role);
     req.session.user_id = rows[0].user_id;
-    console.log(req.session.user_id);
     // Redirect to page according to role
     // res.redirect('')
 
