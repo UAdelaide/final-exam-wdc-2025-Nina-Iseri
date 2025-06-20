@@ -53,8 +53,7 @@ router.post('/login', async(req, res) => {
     res.cookie('role', rows[0].role);
     req.session.user_id = rows[0].user_id;
 
-
-    
+    req.session.save();
     // Redirect to page according to role
     res.redirect('https://localhost:8080/owner-dashboard.html');
 
