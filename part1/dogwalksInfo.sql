@@ -51,5 +51,5 @@ SELECT user_id AS walker_username, total_ratings, average_rating, completed_walk
         WHERE WalkApplications.status = 'accepted' && WalkRequests.status = 'completed'
         GROUP BY walker_id
     ) sub2
-    ON sub1.user_id = sub2.user_id;
+    ON sub1.user_id = sub2.walker_id;
 
