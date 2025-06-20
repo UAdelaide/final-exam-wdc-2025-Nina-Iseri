@@ -41,7 +41,7 @@ let db;
         database: 'DogWalkService'
       });
 
-      // Create tables if they do not exist
+      // Create tables
       await db.execute(`
         CREATE TABLE IF NOT EXISTS books (
           id INT AUTO_INCREMENT PRIMARY KEY,
