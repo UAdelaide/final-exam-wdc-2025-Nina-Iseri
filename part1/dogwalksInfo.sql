@@ -5,3 +5,6 @@ VALUES
 ('carol', 'carol@example.com', 'hashed789', 'owner'),
 ('david', 'david@example.com', 'hashed10', 'walker'),
 ('Alan', 'alan@example.com', 'faded11', 'walker');
+
+
+INSERT INTO 
