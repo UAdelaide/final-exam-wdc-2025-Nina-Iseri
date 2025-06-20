@@ -158,7 +158,7 @@ app.get('/api/walkrequests/:status', async (req, res) => {
             SELECT request_id, name AS dog_name, requested_time, duration_minutes, location, username AS owner_username
             FROM WalkRequests
             INNER JOIN Dogs ON Dogs.dog_id = WalkRequests.dog_id
-            INNER JOIN 
+            INNER JOIN Users ON Users.
 
         `);
         res.json(walk_requests);
