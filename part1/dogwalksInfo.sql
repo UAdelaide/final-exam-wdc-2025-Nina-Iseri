@@ -36,7 +36,7 @@ VALUES
 
 
 
-SELECT user_name AS walker_username, total_ratings, average_rating, completed_walks
+SELECT user_id AS walker_username, total_ratings, average_rating, completed_walks
     FROM (
         SELECT user_id, COUNT(rating) AS total_ratings, SUM(rating) / COUNT(rating) AS average_rating
         FROM Users
@@ -51,5 +51,5 @@ SELECT user_name AS walker_username, total_ratings, average_rating, completed_wa
         WHERE WalkApplications.status = 'accepted' && WalkRequests.status = 'completed'
         GROUP BY walker_id
     ) sub2
-    ON sub1.user_name = sub2.user_name;
+    ON sub1.user_id = sub2.user_id;
 
