@@ -49,8 +49,8 @@ SELECT username AS walker_username, total_ratings, average_rating, completed_wal
         FROM (
 
         ) sub
-        LEFT OUTER JOIN Users ON Users.user_id = 
-        LEFT OUTER JOIN
+        LEFT OUTER JOIN Users ON Users.user_id = sub.walker_id
+        WHERE 
     ) sub2
     WHERE sub1.username = sub2.username
 
