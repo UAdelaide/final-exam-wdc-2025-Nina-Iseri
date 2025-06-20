@@ -17,7 +17,6 @@ app.use(cookieParser());
 
 let db;
 
-
 (async () => {
     try {
       // Connect to MySQL without specifying a database
