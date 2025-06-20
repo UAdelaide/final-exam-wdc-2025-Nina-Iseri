@@ -147,6 +147,8 @@ app.get('/api/dogs', async (req, res) => {
     }
 });
 
+// Route to return all open walk requests
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
