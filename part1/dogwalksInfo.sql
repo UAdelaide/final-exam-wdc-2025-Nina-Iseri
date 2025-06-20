@@ -46,7 +46,8 @@ SELECT username AS walker_username, total_ratings, average_rating, completed_wal
     ) sub1
     INNER JOIN (
         SELECT username, COUNT(*) AS completed_walks
-        FROM 
+        FROM Users
+        LEFT OUTER JOIN Walkk
     ) sub2
     WHERE sub1.username = sub2.username
 
