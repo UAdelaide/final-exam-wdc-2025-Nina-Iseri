@@ -102,7 +102,7 @@ let db;
       `);
 
       // Insert data if table is empty
-      const [rows] 
+      const [
 
 
 
