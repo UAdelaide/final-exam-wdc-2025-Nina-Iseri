@@ -127,18 +127,6 @@ let db;
         SELECT dog_id, '2025-06-11 10:00:00', '60', 'Rundle St', 'accepted' FROM Dogs WHERE name = 'Frank' UNION ALL
         SELECT dog_id, '2025-06-12 12:00:00', '15', 'Hub Central', 'cancelled' FROM Dogs WHERE name = 'Max'
       `);
-
-
-
-      const [rows] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
-      if (rows[0].count === 0) {
-        await db.execute(`
-          INSERT INTO books (title, author) VALUES
-          ('1984', 'George Orwell'),
-          ('To Kill a Mockingbird', 'Harper Lee'),
-          ('Brave New World', 'Aldous Huxley')
-        `);
-      }
     } catch (err) {
       console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
     }
