@@ -7,7 +7,9 @@ a {
   color: #00B7FF;
 }
 
-
+h1 {
+  font-size:large;
+}
 
 section {
   width: 600px;
