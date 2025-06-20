@@ -45,9 +45,9 @@ router.post('/login', async(req, res) => {
       WHERE username = ? AND password_hash = ?
     `, [user, pass]);
     if (rows.length === 0) {
-      return res.status(401).json({error: 'Invalid credentials'});
+      return res.status(401).json({ error: 'Invalid credentials' });
     }
-    
+
     // Store login status in session
     res.cookie('username', rows[0].username);
     res.cookie('role', rows[0].role);
