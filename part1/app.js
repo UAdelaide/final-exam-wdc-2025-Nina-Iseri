@@ -149,9 +149,9 @@ app.get('/api/dogs', async (req, res) => {
 
 // Route to return all open walk requests
 app.get('/api/walkrequests/:status', async (req, res) => {
-    let status = req.params.status 
+    let status = req.params.status || '';
     try {
-
+        
     } catch (err) {
         res.status(500).json({ error: 'Failed to fetch '})
     }
