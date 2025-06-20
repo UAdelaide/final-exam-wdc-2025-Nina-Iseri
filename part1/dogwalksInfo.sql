@@ -26,5 +26,8 @@ SELECT username AS walker_username, total_ratings, average_rating, completed_wal
     FROM (
 
     ) sub1
-    
+    INNER JOIN (
+
+    ) sub2
+    WHERE sub1.use
 
