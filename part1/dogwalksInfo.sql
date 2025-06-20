@@ -36,7 +36,7 @@ VALUES
 
 
 
-SELECT username AS walker_username, total_ratings, CONVERT(DECIMAL(10, 1), average_rating), completed_walks
+SELECT username AS walker_username, total_ratings, ROUND(average_rating, 1), completed_walks
     FROM (
         SELECT user_id, username, COUNT(rating) AS total_ratings, SUM(rating) / COUNT(rating) AS average_rating
         FROM Users
