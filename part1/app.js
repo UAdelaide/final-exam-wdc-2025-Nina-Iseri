@@ -183,7 +183,7 @@ app.get('/api/walkrequests/:status', async (req, res) => {
 app.get('/api/walkers/summary', async (req, res) => {
     try {
         const [summaries] = await db.execute(`
-            SELECT username AS walker_username, total_ratings, average_rating, IFNULL(completed_walks, 0) AS completed_walks
+            SELECT username AS walker_username, total_ratings, ROUND(average_rating, 1) AS average_rating, IFNULL(completed_walks, 0) AS completed_walks
             FROM (
                 SELECT user_id, username, COUNT(rating) AS total_ratings, SUM(rating) / COUNT(rating) AS average_rating
                 FROM Users
