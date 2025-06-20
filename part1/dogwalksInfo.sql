@@ -25,6 +25,8 @@ SELECT dog_id, '2025-06-12 12:00:00', '15', 'Hub Central', 'cancelled' FROM Dogs
 SELECT username AS walker_username, total_ratings, average_rating, completed_walks
     FROM (
         SELECT username, SUM(rating) AS total_ratings, SUM(rating) / COUNT(rating) AS average_rating
+        FROM Users
+        INNER JOIN WalkRatings ON 
     ) sub1
     INNER JOIN (
 
