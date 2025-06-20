@@ -132,6 +132,7 @@ let db;
     }
   })();
 
+// Route to return 
 
 app.use(express.static(path.join(__dirname, 'public')));
 
