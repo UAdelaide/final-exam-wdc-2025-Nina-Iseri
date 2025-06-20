@@ -16,7 +16,7 @@ router.get('/walkrequests:status', function(req, res, next) {
 });
 
 
-router.get('/walkers', function(req, res, next) {
+router.get('/walkers/', function(req, res, next) {
 
 });
 
