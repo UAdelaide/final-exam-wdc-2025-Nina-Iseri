@@ -54,7 +54,7 @@ router.post('/login', async(req, res) => {
     req.session.userID = rows[0].user_id;
 
     // Redirect to page according to role
-    res.redirect('')
+    // res.redirect('')
 
     // res.json({message: 'Login successful', user: rows[0].username});
   } catch (err) {
