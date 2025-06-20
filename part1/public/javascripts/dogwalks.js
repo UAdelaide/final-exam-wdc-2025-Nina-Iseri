@@ -11,7 +11,7 @@ createApp({
             }
         };
     },
-    async created: {
-
+    async created() {
+        try 
     }
 }).mount("body");
