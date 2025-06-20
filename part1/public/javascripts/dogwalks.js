@@ -5,6 +5,8 @@ createApp({
         return {
             dog_of_the_day: {
                 name: '',
+                description: '',
+                owner: '',
                 
             }
         };
