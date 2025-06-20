@@ -4,7 +4,7 @@ createApp({
     data() {
         return {
             dog_of_the_day: {
-                name: '',
+                name: 'Cauchy',
                 description: '',
                 owner: '',
                 imageUrl: ''
