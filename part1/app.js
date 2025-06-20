@@ -159,11 +159,11 @@ app.get('/api/walkrequests/:status', async (req, res) => {
             FROM WalkRequests
             INNER JOIN Dogs ON Dogs.dog_id = WalkRequests.dog_id
             INNER JOIN Users ON Users.user_id = Dogs.owner_id
-
+            WHERE status = 'open'
         `);
         res.json(walk_requests);
     } catch (err) {
-        res.status(500).json({ error: 'Failed to fetch '})
+        res.status(500).json({ error: 'Failed to fetch '});
     }
 });
 
