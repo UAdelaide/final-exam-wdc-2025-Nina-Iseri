@@ -136,7 +136,7 @@ let db;
 app.get('/api/dogs', async (req, res) => {
     try {
         const [dogs] = await db.execute(`
-            SELECT name 
+            SELECT name AS dog_name, size, 
             `)
     } catch (err) {
         res.status(500).json({ error: 'Failed to fetch dogs'});
