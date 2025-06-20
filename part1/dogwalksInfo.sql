@@ -8,8 +8,7 @@ VALUES
 
 
 INSERT INTO Dogs (owner_id, name, size)
-SELECT
-user_id, 'Max', 'medium' FROM Users Where username = 'alice123',
+SELECT user_id, 'Max', 'medium' FROM Users Where username = 'alice123',
 user_id, 'Bella', 'small' FROM Users Where username = 'carol123',
 user_id, 'Emma', 'large' FROM Users Where username = 'bobwalker',
 user_id, 'Frank', 'medium' FROM Users Where username = 'david',
