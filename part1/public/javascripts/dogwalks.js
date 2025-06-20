@@ -2,4 +2,4 @@ const { createApp } = Vue;
 
 createApp({
 
-});
+}
