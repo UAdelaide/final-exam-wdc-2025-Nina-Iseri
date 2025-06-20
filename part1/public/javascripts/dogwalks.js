@@ -19,8 +19,8 @@ createApp({
             await fetch("https://dog.ceo/api/breeds/image/random")
             .then((res) => res.json)
             .then((data) => {
+                alert(data);
                 this.dog_of_the_day.imageUrl = data.message;
-                alert(this.dog_of_the_day.imageUrl);
             });
         } catch (err) {
             console.error("Unable to fetch dog image");
