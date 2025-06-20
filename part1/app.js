@@ -154,7 +154,7 @@ app.get('/api/walkrequests/:status', async (req, res) => {
         res.status(400).json({ error: 'Invalid walkrequest status'})
     }
     try {
-        const []
+        const [walk_requests] = 
     } catch (err) {
         res.status(500).json({ error: 'Failed to fetch '})
     }
