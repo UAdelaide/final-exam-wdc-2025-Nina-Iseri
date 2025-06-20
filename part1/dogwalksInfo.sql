@@ -24,10 +24,10 @@ SELECT dog_id, '2025-06-12 12:00:00', '15', 'Hub Central', 'cancelled' FROM Dogs
 
 SELECT username AS walker_username, total_ratings, average_rating, completed_walks
     FROM (
-
+        SELECT 
     ) sub1
     INNER JOIN (
 
     ) sub2
-    WHERE sub1.use
+    WHERE sub1.username = sub2.username
 
