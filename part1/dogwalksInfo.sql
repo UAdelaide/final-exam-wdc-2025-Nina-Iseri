@@ -1,2 +1,3 @@
 INSERT INTO Users
-VALUES ()
+VALUES
+('')
