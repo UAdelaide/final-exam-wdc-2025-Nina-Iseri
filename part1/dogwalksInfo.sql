@@ -56,5 +56,5 @@ SELECT username AS walker_username, total_ratings, average_rating, completed_wal
         RIGHT OUTER JOIN Users ON Users.user_id = sub.walker_id
         WHERE role = 'walker'
     ) sub2
-    WHERE sub1.username = sub2.username;
+    ON sub1.username = sub2.username;
 
