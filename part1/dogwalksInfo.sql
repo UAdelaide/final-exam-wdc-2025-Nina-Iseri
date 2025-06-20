@@ -9,4 +9,5 @@ VALUES
 
 INSERT INTO Dogs (owner_id, name, size)
 SELECT user_id, 'Max', 'medium' FROM Users Where username = 'alice123',
-SELECT user_id, 'Bella', 'small' FROM Users Where username = 'carol123';
+SELECT user_id, 'Bella', 'small' FROM Users Where username = 'carol123',
+SELECT user_id, ''
