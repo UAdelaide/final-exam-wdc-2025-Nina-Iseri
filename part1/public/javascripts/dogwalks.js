@@ -7,11 +7,11 @@ createApp({
                 name: '',
                 description: '',
                 owner: '',
-                
+                imageUrl: ''
             }
         };
     },
     methods: {
-
+        
     }
 }).mount("body");
