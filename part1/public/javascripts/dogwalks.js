@@ -17,9 +17,8 @@ createApp({
     async created() {
         try {
             await fetch("https://dog.ceo/api/breeds/image/random")
-            .then((res) => res.json)
+            .then((res) => res.json())
             .then((data) => {
-                alert(data.message);
                 this.dog_of_the_day.imageUrl = data.message;
             });
         } catch (err) {
