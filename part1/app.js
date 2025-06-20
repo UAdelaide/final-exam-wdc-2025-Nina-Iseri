@@ -137,7 +137,7 @@ app.get('/api/dogs', async (req, res) {
     try {
 
     } catch (err) {
-        res.status(500).json
+        res.status(500).json({ error: 'Failed to fetch '})
     }
 })
 
