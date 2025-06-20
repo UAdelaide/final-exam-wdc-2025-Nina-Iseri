@@ -55,8 +55,9 @@ router.post('/login', async(req, res) => {
 
     req.session.save();
     // Redirect to page according to role
-    res.redirect('http://localhost:8080/owner-dashboard.html');
+    // res.redirect('http://localhost:8080/owner-dashboard.html');
 
+    res.json({ message: 'Login successful', user: rows[0] });
   } catch (err) {
     res.status(500).json({error: 'Login failed'});
   }
