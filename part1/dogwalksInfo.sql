@@ -30,7 +30,7 @@ SELECT username AS walker_username, total_ratings, average_rating, completed_wal
         GROUP BY username
     ) sub1
     INNER JOIN (
-
+        SELECT username, 
     ) sub2
     WHERE sub1.username = sub2.username
 
