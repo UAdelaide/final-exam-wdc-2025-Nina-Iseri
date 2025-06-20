@@ -170,7 +170,9 @@ app.get('/api/walkrequests/:status', async (req, res) => {
 // Route to return a summary of each walker
 app.get('/api/walkers/summary', async (req, res) => {
     try {
-        const [summaries]
+        const [summaries] = await db.execute(`
+            
+        `);
     }
 });
 
