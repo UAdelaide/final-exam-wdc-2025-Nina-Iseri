@@ -52,6 +52,7 @@ let db;
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
       `);
+      await db.execute(``);
 
       // Insert data if table is empty
       const [rows] = await db.execute('SELECT COUNT(*) AS count FROM books');
