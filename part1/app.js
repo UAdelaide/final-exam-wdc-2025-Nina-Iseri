@@ -150,7 +150,9 @@ app.get('/api/dogs', async (req, res) => {
 // Route to return all open walk requests
 app.get('/api/walkrequests/:status', async (req, res) => {
     let status = req.params.status || '';
-    
+    if (status != 'open') {
+        res.
+    }
     try {
 
     } catch (err) {
