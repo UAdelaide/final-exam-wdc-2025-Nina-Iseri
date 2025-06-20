@@ -19,7 +19,7 @@ createApp({
                 this.dog_of_the_day.imageUrl = data.message;
             });
         } catch (err) {
-            console.error()
+            console.error("")
         }
     }
 }).mount("body");
