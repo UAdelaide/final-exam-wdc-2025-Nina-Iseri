@@ -45,16 +45,11 @@ SELECT user_name AS walker_username, total_ratings, average_rating, completed_wa
         GROUP BY username
     ) sub1
     INNER JOIN (
-        SELECT username AS user_name, IFNULL(completed_walks, 0) AS completed_walks
-        FROM (
-            SELECT walker_id, COUNT(*) AS completed_walks
-            FROM WalkRequests
-            INNER JOIN WalkApplications ON WalkApplications.request_id = WalkRequests.request_id
-            WHERE WalkApplications.status = 'accepted' && WalkRequests.status = 'completed'
-            GROUP BY walker_id
-        ) sub
-        RIGHT OUTER JOIN Users ON Users.user_id = sub.walker_id
-        WHERE role = 'walker'
+        SELECT walker_id, COUNT(*) AS completed_walks
+        FROM WalkRequests
+        INNER JOIN WalkApplications ON WalkApplications.request_id = WalkRequests.request_id
+        WHERE WalkApplications.status = 'accepted' && WalkRequests.status = 'completed'
+        GROUP BY walker_id
     ) sub2
     ON sub1.user_name = sub2.user_name;
 
