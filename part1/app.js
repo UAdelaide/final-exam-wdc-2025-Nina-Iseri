@@ -151,7 +151,7 @@ app.get('/api/dogs', async (req, res) => {
 app.get('/api/walkrequests/:status', async (req, res) => {
     let status = req.params.status || '';
     if (status != 'open') {
-        res.status(400).json({ error: 'Invalid walkrequest status'});
+        return res.status(400).json({ error: 'Invalid walkrequest status'});
         return;
     }
     try {
