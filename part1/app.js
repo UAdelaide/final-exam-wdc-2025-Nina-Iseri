@@ -132,7 +132,8 @@ let db;
     }
   })();
 
-// Route to return 
+// Route to return list of all dogs
+app.get('/api/dogs', async )
 
 app.use(express.static(path.join(__dirname, 'public')));
 
