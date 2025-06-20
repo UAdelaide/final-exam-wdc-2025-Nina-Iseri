@@ -183,7 +183,7 @@ app.get('/api/walkrequests/:status', async (req, res) => {
 app.get('/api/walkers/summary', async (req, res) => {
     try {
         const [summaries] = await db.execute(`
-            SELECT username AS walker_username, COUNT (*) AS total_ratings, SUM (*) / COUNT (*) AS average_ratings,
+            SELECT username AS walker_username, 
         `);
         res.json(summaries);
     } catch (err) {
