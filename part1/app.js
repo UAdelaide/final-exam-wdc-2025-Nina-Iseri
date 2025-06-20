@@ -126,8 +126,8 @@ let db;
         SELECT dog_id, '2025-06-10 08:00:00', '30', 'Parklands', 'open' FROM Dogs WHERE name = 'Max' UNION ALL
         SELECT dog_id, '2025-06-10 09:30:00', '45', 'Beachside Ave', 'accepted' FROM Dogs WHERE name = 'Bella' UNION ALL
         SELECT dog_id, '1970-01-01 00:00:00', '5', 'Moon', 'open' FROM Dogs WHERE name = 'Emma' UNION ALL
-        SELECT dog_id, '2025-06-11 10:00:00', '60', 'Rundle St', 'accepted' FROM Dogs WHERE name = 'Frank' UNION ALL
-        SELECT dog_id, '2025-06-12 12:00:00', '15', 'Hub Central', 'cancelled' FROM Dogs WHERE name = 'Max'
+        SELECT dog_id, '2025-06-11 10:00:00', '60', 'Rundle St', 'completed' FROM Dogs WHERE name = 'Frank' UNION ALL
+        SELECT dog_id, '2025-06-12 12:00:00', '15', 'Hub Central', 'completed' FROM Dogs WHERE name = 'Max'
       `);
       await db.execute(`
         INSERT INTO WalkApplications (request_id, walker_id, status)
