@@ -178,7 +178,7 @@ app.get('/api/walkers/summary', async (req, res) => {
     try {
         const [summaries] = await db.execute(`
             SELECT username AS walker_username, COUNT (*) AS total_ratings, SUM (*) / COUNT (*) AS average_ratings,
-                (SELECT )
+                (SELECT COUNT (*) )
         `);
     }
 });
