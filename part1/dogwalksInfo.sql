@@ -15,7 +15,7 @@ SELECT user_id, 'Frank', 'medium' FROM Users Where username = 'david' UNION ALL
 SELECT user_id, 'George', 'small' FROM Users Where username = 'alice123';
 
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
-SELECT dog_id, 'Max', '20250610 08:00:00 AM'
+SELECT dog_id, 'Max', '20250610 08:00:00 AM', '30', ''
 
 
 
