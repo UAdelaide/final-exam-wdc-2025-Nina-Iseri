@@ -150,7 +150,7 @@ app.get('/api/dogs', async (req, res) => {
 // Route to return all open walk requests
 app.get('/api/walkrequests/:status', async (req, res) => {
     let status = req.params.status || '';
-    if (status != 'open') {
+    if (status !== 'open') {
         return res.status(400).json({ error: 'Invalid walkrequest status'});
     }
     try {
@@ -166,6 +166,8 @@ app.get('/api/walkrequests/:status', async (req, res) => {
         res.status(500).json({ error: 'Failed to fetch open walkrequests'});
     }
 });
+
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 
