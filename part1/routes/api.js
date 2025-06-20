@@ -10,11 +10,9 @@ router.get('/dogs', function(req, res, next) {
 
 });
 
-
 router.get('/walkrequests:status', function(req, res, next) {
 
 });
-
 
 router.get('/walkers/summary', function(req, res, next) {
 
