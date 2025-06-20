@@ -137,7 +137,7 @@ app.get('/api/dogs', async (req, res) => {
     try {
         const [dogs] = await db.execute(`
             SELECT name AS dog_name, size, username AS owner_username
-            FROM Dogs INNER JOIN Users ON Dogs.owner_id = 
+            FROM Dogs INNER JOIN Users ON Dogs.owner_id = Users.user_id
         `);
         res.json(dogs);
     } catch (err) {
