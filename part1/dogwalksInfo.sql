@@ -26,7 +26,7 @@ SELECT username AS walker_username, total_ratings, average_rating, completed_wal
     FROM (
         SELECT username, SUM(rating) AS total_ratings, SUM(rating) / COUNT(rating) AS average_rating
         FROM Users
-        INNER JOIN WalkRatings ON 
+        INNER JOIN WalkRatings ON WalkRatings.walker_id = Users.user_id
     ) sub1
     INNER JOIN (
 
