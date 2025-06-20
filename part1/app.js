@@ -117,7 +117,7 @@ let db;
         INSERT INTO Dogs (owner_id, name, size)
         SELECT user_id, 'Max', 'medium' FROM Users Where username = 'alice123' UNION ALL
         SELECT user_id, 'Bella', 'small' FROM Users Where username = 'carol123' UNION ALL
-        SELECT user_id, 'Emma', 'large' FROM Users Where username = 'bobwalker' UNION ALL
+        SELECT user_id, 'Emma', 'large' FROM Users Where username = 'alice123' UNION ALL
         SELECT user_id, 'Frank', 'medium' FROM Users Where username = 'david' UNION ALL
         SELECT user_id, 'George', 'small' FROM Users Where username = 'alice123'
       `);
