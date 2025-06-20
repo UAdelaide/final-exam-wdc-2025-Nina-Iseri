@@ -157,6 +157,7 @@ app.get('/api/walkrequests/:status', async (req, res) => {
         const [walk_requests] = await db.execute(`
             SELECT request_id, name AS dog_name, requested_time, duration_minutes, location, username AS owner_username
             FROM WalkRequests
+            INNER JOIN Dogs ON 
 
         `);
         res.json(walk_requests);
