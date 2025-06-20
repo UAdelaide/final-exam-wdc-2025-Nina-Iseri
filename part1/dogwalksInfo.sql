@@ -14,7 +14,8 @@ SELECT user_id, 'Emma', 'large' FROM Users Where username = 'bobwalker' UNION AL
 SELECT user_id, 'Frank', 'medium' FROM Users Where username = 'david' UNION ALL
 SELECT user_id, 'George', 'small' FROM Users Where username = 'alice123';
 
-INSERT INTO WalkRequests (request_id, )
+INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
+
 
 
 
