@@ -6,7 +6,7 @@ createApp({
             dog_of_the_day: {
                 name: 'Cauchy',
                 owner: 'Alan',
-                description: 'Happy happy happy ',
+                description: 'Happy happy happy ^-^',
                 imageUrl: ''
             }
         };
