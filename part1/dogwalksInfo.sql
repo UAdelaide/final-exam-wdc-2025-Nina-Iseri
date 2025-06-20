@@ -18,7 +18,7 @@ INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, st
 SELECT dog_id, '2025-06-10 08:00:00', '30', 'Parklands', 'open' FROM Dogs WHERE name = 'Max' UNION ALL
 SELECT dog_id, '2025-06-10 09:30:00', '45', 'Beachside Ave', 'accepted' FROM Dogs WHERE name = 'Bella' UNION ALL
 SELECT dog_id, '1970-01-01 00:00:00', '5', 'Moon', 'open' FROM Dogs WHERE name = 'Emma' UNION ALL
-SELECT dog_id, '2025-06-11 10:00:00', '60', 'Rundle'
+SELECT dog_id, '2025-06-11 10:00:00', '60', 'Rundle St', 'accepted' FROM Dogs WHERE name = 'Frank' UNION ALL
 
 
 
