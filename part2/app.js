@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(session({
-    secret: process.env.SESSION_SECRET,
+    secret: '123',
     resave: false,
     saveUninitialized: true,
     cookie: { maxAge: 86400000 }
