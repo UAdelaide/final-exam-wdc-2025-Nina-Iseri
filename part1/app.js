@@ -101,8 +101,9 @@ let db;
         )
       `);
 
-      // Insert data if table is empty
-      const [
+      // Insert data
+      await db.execute(`
+        `)
 
 
 
