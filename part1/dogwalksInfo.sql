@@ -45,7 +45,7 @@ SELECT username AS walker_username, total_ratings, average_rating, completed_wal
         GROUP BY username
     ) sub1
     INNER JOIN (
-        SELECT username, IScompleted_walks
+        SELECT username, IFNULL(completed_walks)
         FROM (
             SELECT walker_id,
         ) sub
