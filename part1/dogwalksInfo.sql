@@ -7,4 +7,5 @@ VALUES
 ('Alan', 'alan@example.com', 'faded11', 'walker');
 
 
-INSERT INTO Dogs (owner_id, name,)
+INSERT INTO Dogs (owner_id, name, size)
+SELECT 
