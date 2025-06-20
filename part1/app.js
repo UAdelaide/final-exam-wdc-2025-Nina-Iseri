@@ -140,11 +140,11 @@ app.get('/api/dogs', async (req, res) => {
             FROM Dogs
 
         `);
-        
+        res.json(dogs);
     } catch (err) {
         res.status(500).json({ error: 'Failed to fetch dogs'});
     }
-})
+});
 
 app.use(express.static(path.join(__dirname, 'public')));
 
