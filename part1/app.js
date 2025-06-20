@@ -167,6 +167,7 @@ app.get('/api/walkrequests/:status', async (req, res) => {
     }
 });
 
+// Route to return a summary of each walker 
 
 
 app.use(express.static(path.join(__dirname, 'public')));
