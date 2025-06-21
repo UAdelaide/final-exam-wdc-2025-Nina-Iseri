@@ -49,6 +49,9 @@ router.post('/logout', async (req, res) => {
 
 });
 
+// GET all dogs of a user
+router.post('/dogs')
+
 // POST login
 router.post('/login', async (req, res) => {
   const { user, pass } = req.body;
