@@ -72,8 +72,10 @@ router.post('/login', async (req, res) => {
 
 router.get('/redirect', async(req, res) => {
   let role = req.session.role || '';
-  if (!role.length) 
-  if ()
+  if (!role.length) {
+    return res.redirect('/');
+  }
+  res.redirect('localhost:/')
 });
 
 // // POST login (dummy version)
