@@ -16,9 +16,9 @@ app.use(session({
 }));
 
 // Routes
+const indexRoutes = require('./routes/index');
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
-const indexRoutes = require('./routes/index');
 
 app.use('/', indexRoutes);
 app.use('/api/walks', walkRoutes);
