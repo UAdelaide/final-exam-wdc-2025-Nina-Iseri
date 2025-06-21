@@ -186,7 +186,8 @@ async function login() {
     // Define function to run on response
     xmlhttp.onreadystatechange = async function() {
         if (this.readyState == 4 && this.status == 200) {
-            alert('Welcome' + JSON.parse(this.response).user.username);
+            let res = JSON.parse(this.response.user);
+            alert('Welcome' + res.username);
             
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
