@@ -79,16 +79,16 @@ router.get('/owner-dashboard', async (req, res) => {
   if (role !== 'owner') {
     return res.redirect('/');
   }
-  res.render('owner-dashboard');
+  res.render('owner-dashboard.html');
 });
 
 router.get('/walker-dashboard', async (req, res) => {
   let role = req.session.role || '';
   console.log("role: "+role);
-  if (role !== 'owner') {
+  if (role !== 'walker') {
     return res.redirect('/');
   }
-  res.render('walk-dashboard');
+  res.render('walker-dashboard');
 });
 
 // // POST login (dummy version)
