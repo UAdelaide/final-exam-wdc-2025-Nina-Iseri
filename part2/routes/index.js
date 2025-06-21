@@ -10,11 +10,13 @@ router.get('/', (req, res, next) => {
     res.redirect(`/${role}-dashboard`);
 });
 
-router.get('/', (req, res, next) => {
+router.get('/owner-dashboard', (req, res, next) => {
     res.render('owner-dashboard');
 });
 
-router.get('/')
+router.get('/', (req, res, next) => {
+    res.render('walker-dashboard');
+});
 
 
 
