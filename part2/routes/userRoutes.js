@@ -50,7 +50,9 @@ router.post('/logout', async (req, res) => {
 });
 
 // GET all dogs of a user
-router.post('/dogs')
+router.post('/my-dogs', async (req, res) => {
+  
+});
 
 // POST login
 router.post('/login', async (req, res) => {
