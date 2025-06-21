@@ -63,6 +63,8 @@ router.post('/login', async(req, res) => {
   }
 });
 
+router.get('/owner-dashboard', )
+
 // // POST login (dummy version)
 // router.post('/login', async (req, res) => {
 //   const { email, password } = req.body;
