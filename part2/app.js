@@ -16,7 +16,7 @@ app.use(session({
     cookie: { maxAge: 86400000 }
 }));
 
-const db = require('../models/db');
+const db = require('/models/db');
 
 // Route to return list of all dogs
 app.get('/api/dogs', async (req, res) => {
