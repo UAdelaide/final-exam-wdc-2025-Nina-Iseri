@@ -56,7 +56,11 @@ router.post('/my-dogs', async (req, res) => {
     return res.status(500).json({ error: 'Not logged in' });
   }
 
-  try 
+  try {
+    const [rows] = await db.query(`
+
+    `)
+  }
 });
 
 // POST login
