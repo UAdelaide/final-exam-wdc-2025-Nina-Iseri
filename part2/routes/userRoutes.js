@@ -76,7 +76,7 @@ router.post('/login', async (req, res) => {
 
 router.get('/redirect', async(req, res) => {
   console.log('redirecting');
-  let role = req.cookie.role || '';
+  let role = req.cookies.role || '';
   console.log(role);
   if (!role.length) {
     console.log('redirected');
