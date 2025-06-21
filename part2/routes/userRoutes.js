@@ -57,7 +57,6 @@ router.post('/login', async(req, res) => {
 
     req.session.save();
 
-
     res.redirect('http://localhost:8080/owner-dashboard.html');
   } catch (err) {
     res.status(500).json({error: 'Login failed'});
