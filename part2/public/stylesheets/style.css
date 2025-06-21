@@ -160,3 +160,7 @@ section {
     height: auto;
 }
 
+.dog-list-container {
+    display: block;
+    
+}
