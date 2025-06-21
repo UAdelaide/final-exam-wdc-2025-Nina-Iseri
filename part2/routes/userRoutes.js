@@ -65,6 +65,7 @@ router.get('/my-dogs', async (req, res) => {
     `, [user_id]);
     res.json(rows);
   } catch (err) {
+    console.log("no db");
     return res.status(500).json({ error: 'Unable to query database'});
   }
 });
