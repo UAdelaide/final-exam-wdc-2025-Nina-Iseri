@@ -60,8 +60,9 @@ router.post('/my-dogs', async (req, res) => {
     const [rows] = await db.query(`
       SELECT dog_id, name
       FROM Dogs
-      WHERE 
-    `)
+      WHERE owner_id = ?
+    `, [user_id]);
+    res
   } catch (err) {
 
   }
