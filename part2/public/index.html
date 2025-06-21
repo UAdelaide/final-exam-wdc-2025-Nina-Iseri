@@ -79,8 +79,8 @@
           }
         }
       },
-      async mounted()  {
-        updateDogs();
+      async created()  {
+        this.updateDogs();
       }
     }).mount('#app');
   </script>
