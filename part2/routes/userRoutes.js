@@ -77,8 +77,9 @@ router.get('/owner-dashboard', async (req, res)  {
   let role = req.session.role || '';
   console.log("role: "+role);
   if (role !== 'owner') {
-    
+    return res.redirect('/');
   }
+
 });
 
 router.get('/redirect', async(req, res) => {
