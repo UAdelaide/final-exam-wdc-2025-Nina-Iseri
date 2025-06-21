@@ -79,7 +79,7 @@ router.get('/owner-dashboard', async (req, res)  {
   if (role !== 'owner') {
     return res.redirect('/');
   }
-
+  res.render('owner')
 });
 
 router.get('/redirect', async(req, res) => {
