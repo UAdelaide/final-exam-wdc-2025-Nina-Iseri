@@ -40,13 +40,12 @@ router.get('/me', (req, res) => {
 router.post('/logout', async (req, res) => {
   req.session.destroy(err => {
     if (err) {
-      return res.status(500).json({ error: ''})
+      return res.status(500).json({ error: 'Unable to log out'});
     }
-  });
-  try {
     res.clearCookie('username');
     res.clearCookie('role');
-    res.
+  });
+  try {
   }
 });
 
