@@ -166,8 +166,8 @@ section {
     float: left;
 }
 
-.input-container {
-    
+.input-container input {
+    margin-bottom: 30px;
 }
 
 .dog-list-container {
