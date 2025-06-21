@@ -70,8 +70,8 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.get('/owner-dashboard', async(req, res) => {
-  res.render('owner-dashboard');
+router.get('/redirect', async(req, res) => {
+  
 });
 
 // // POST login (dummy version)
