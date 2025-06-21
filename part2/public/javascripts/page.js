@@ -173,6 +173,7 @@ function downvote(index) {
     updatePosts();
 }
 
+${}
 
 async function login() {
 
