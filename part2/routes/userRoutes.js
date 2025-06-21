@@ -39,7 +39,9 @@ router.get('/me', (req, res) => {
 // POST logout
 router.post('/logout', async (req, res) => {
   try {
-    res.clear
+    res.clearCookie('username');
+    res.clearCookie('role');
+    
   }
 });
 
