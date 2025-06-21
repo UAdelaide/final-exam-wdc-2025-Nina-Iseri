@@ -36,6 +36,9 @@ router.get('/me', (req, res) => {
   res.json(req.session.user);
 });
 
+// POST logout
+router.post()
+
 // POST login
 router.post('/login', async (req, res) => {
   const { user, pass } = req.body;
