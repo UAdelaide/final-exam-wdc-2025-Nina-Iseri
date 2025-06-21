@@ -188,7 +188,7 @@ async function login() {
         if (this.readyState == 4 && this.status == 200) {
             let res = JSON.parse(this.response);
             alert('Welcome ' + res.user.username);
-            window.location.href = `/api/users/${res.user.role}-dashboard`;
+            window.location.href = `/${res.user.role}-dashboard.html`;
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
         }
