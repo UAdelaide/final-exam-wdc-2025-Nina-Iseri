@@ -52,7 +52,9 @@ router.post('/logout', async (req, res) => {
 // GET all dogs of a user
 router.post('/my-dogs', async (req, res) => {
   const user_id = Number(req.session.user_id) || 0;
-  id
+  if (!user_id) {
+    res.
+  }
 });
 
 // POST login
