@@ -7,7 +7,7 @@ router.get('/', (req, res, next) => {
     if (!role.length) {
         res.render('index');
     }
-    res.redirect('/owner-dashboard');
+    res.redirect(`/${role}-dashboard`);
 });
 
 module.exports = router;
