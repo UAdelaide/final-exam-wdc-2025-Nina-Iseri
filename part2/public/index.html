@@ -14,19 +14,17 @@
   <div id="app" class="container py-5">
 
     <div class="login-container">
-
+      <h1 class="mb-4 text-primary">{{ message }}</h1>
+      <form id="login">
+        <p>Username</p>
+        <input type="text" id="username" placeholder="Enter your name" required />
+        <br>
+        <p>Password</p>
+        <input type="password" id="password" required />
+        <br>
+        <button type="button" class="btn btn-outline-primary" onclick="login()">Login</button>
+      </form>
     </div>
-    <h1 class="mb-4 text-primary">{{ message }}</h1>
-
-    <form id="login">
-      <p>Username</p>
-      <input type="text" id="username" placeholder="Enter your name" required />
-      <br>
-      <p>Password</p>
-      <input type="password" id="password" required />
-      <br>
-      <button type="button" class="btn btn-outline-primary" onclick="login()">Login</button>
-    </form>
 
     <div class="dog-list-container">
       <p class="lead">Connect with trusted walkers for your beloved dog!</p>
