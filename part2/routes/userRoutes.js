@@ -41,7 +41,7 @@ router.post('/logout', async (req, res) => {
   try {
     res.clearCookie('username');
     res.clearCookie('role');
-    
+    res.
   }
 });
 
