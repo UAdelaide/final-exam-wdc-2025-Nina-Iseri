@@ -1,14 +1,14 @@
 const express = require('express');
 const path = require('path');
 const session = require('express-session');
-var cookieParser = require('cookie-parser');
+const cookieParser = require('cookie-parser');
 require('dotenv').config();
 
 const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(cookieParser());
 app.use(session({
     secret: '123',
     resave: false,
@@ -20,6 +20,8 @@ app.use(session({
 const indexRoutes = require('./routes/index');
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRoutes);
 app.use('/api/walks', walkRoutes);
