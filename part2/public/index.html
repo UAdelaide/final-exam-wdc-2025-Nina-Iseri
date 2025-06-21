@@ -34,9 +34,9 @@
       <tbody>
         <tr v-for="dog in dogs">
           <td><img alt="Cuttie" :src=dog.imageUrl></td>
-          <td>{{dog.name}}</td>
+          <td>{{dog.dog_name}}</td>
           <td>{{dog.size}}</td>
-          <td>{{}}</td>
+          <td>{{dog.owner_username}}</td>
         </tr>
       </tbody>
     </table>
