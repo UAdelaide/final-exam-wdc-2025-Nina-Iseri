@@ -66,7 +66,7 @@ router.post('/login', async (req, res) => {
       //   message: 'Login Successful',
       //   user: rows[0]
       // });
-      res.redirect('localhost:8080/owner-')
+      res.redirect('localhost:8080/owner-dashboard.html');
     });
   } catch (err) {
     res.status(500).json({error: 'Login failed'});
