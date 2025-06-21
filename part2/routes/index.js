@@ -13,7 +13,7 @@ router.get('/', (req, res, next) => {
 
 router.get('/redirect', (req, res, next) => {
     let role = req.session.role || '';
-    res.render('owner-dashboard');
+    res.render(`${role}-dashboard`);
 });
 
 module.exports = router;
