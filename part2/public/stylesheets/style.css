@@ -155,6 +155,7 @@ section {
     display: none;
 }
 
-#dog-list img {
-    
+#dog-list img.resize {
+    width: 100px;
+    height: auto;
 }
