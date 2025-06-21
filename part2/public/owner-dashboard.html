@@ -89,7 +89,7 @@
 
         async function loadDogs() {
           try {
-            await fetch(/api/walks/)
+            await fetch('/api/users/my-dogs')
             .then((res) => res.json())
             .then((data) => {
               dogs = data;
