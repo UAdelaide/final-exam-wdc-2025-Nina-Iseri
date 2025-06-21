@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
+var mysql = require('mysql2/promise');
 require('dotenv').config();
 
 const app = express();
@@ -15,6 +16,8 @@ app.use(session({
     saveUninitialized: true,
     cookie: { maxAge: 86400000 }
 }));
+
+let db;
 
 // Route to return list of all dogs
 app.get('/api/dogs', async (req, res) => {
