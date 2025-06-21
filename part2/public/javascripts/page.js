@@ -187,6 +187,7 @@ async function login() {
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             alert(this.response);
+            await fetch('')
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
         }
