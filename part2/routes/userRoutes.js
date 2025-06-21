@@ -59,6 +59,8 @@ router.post('/my-dogs', async (req, res) => {
   try {
     const [rows] = await db.query(`
       SELECT dog_id, name
+      FROM Dogs
+      WHERE 
     `)
   } catch (err) {
 
