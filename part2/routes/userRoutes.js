@@ -75,7 +75,7 @@ router.get('/redirect', async(req, res) => {
   if (!role.length) {
     return res.redirect('/');
   }
-  res.redirect(`/${role}`);
+  res.redirect(`/${role}-dashboard`);
 });
 
 // // POST login (dummy version)
