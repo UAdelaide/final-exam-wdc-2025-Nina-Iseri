@@ -186,8 +186,8 @@ async function login() {
     // Define function to run on response
     xmlhttp.onreadystatechange = async function() {
         if (this.readyState == 4 && this.status == 200) {
-            let res = this.response.user;
-            await fetch('localhost:8080/api/users/redirect')
+            // let res = this.response.user;
+            await fetch('localhost:8080/api/users/redirect');
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
         }
