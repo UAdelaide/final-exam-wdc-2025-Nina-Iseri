@@ -96,7 +96,8 @@
               dogs = data;
             });
           } catch (err) {
-            
+            dogs = [];
+            console.error('Error: ', err)
           }
         }
 
