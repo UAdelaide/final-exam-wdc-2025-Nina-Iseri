@@ -58,16 +58,15 @@ router.post('/login', async (req, res) => {
     res.cookie('role', rows[0].role, { maxAge });
     req.session.user_id = rows[0].user_id;
     req.session.role = rows[0].role;
-    console.log(req.session);
 
     req.session.save((err) => {
       if (err) {
         return res.status(500).json({ error: 'Error saving sessions' });
       }
-      // res.status(200).json({
-      //   message: 'Login Successful',
-      //   user: rows[0]
-      // });
+      res.status(200).json({
+        message: 'Login Successful',
+        user: rows[0]
+      });
       res.redirect('localhost:8080/owner-dashboard.html');
     });
   } catch (err) {
