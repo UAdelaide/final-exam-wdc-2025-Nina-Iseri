@@ -8,16 +8,12 @@ router.get('/', (req, res, next) => {
     if (!role.length) {
         res.render('index');
     }
-    res.redirect(`/${role}-dashboard`);
+    res.redirect(`/redirect`);
 });
 
-router.get('redirect/owner-dashboard', (req, res, next) => {
+router.get('/redirect', (req, res, next) => {
     res.render('owner-dashboard');
-});
-
-router.get('/walker-dashboard', (req, res, next) => {
-    res.render('walker-dashboard');
-});
+});\
 
 
 
