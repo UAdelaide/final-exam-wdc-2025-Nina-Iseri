@@ -61,7 +61,8 @@ router.post('/login', async(req, res) => {
         return res.status(500).json({ error: 'Error saving sessions' });
       }
       res.status(200).json({
-        user
+        username: rows[0].username,
+        
       });
     });
   } catch (err) {
