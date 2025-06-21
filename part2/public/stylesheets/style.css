@@ -163,7 +163,7 @@ section {
 .login-container {
     width: 400px;
     display: block;
-    
+    float: left;
 }
 
 .dog-list-container {
