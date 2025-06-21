@@ -34,9 +34,9 @@
       <tbody>
         <tr v-for="dog in dogs">
           <td><img alt="Cuttie" :src=dog.imageUrl></td>
-          <td>{{dog.dog_name}}</td>
+          <td>{{dog.name}}</td>
           <td>{{dog.size}}</td>
-          <td>{{dog.owner_username}}</td>
+          <td>{{dog.owner}}</td>
         </tr>
       </tbody>
     </table>
@@ -63,7 +63,8 @@
                 let dog = {
                   dog_name: data[i].dog_name,
                   size: data[i].size,
-                  owner_username: data[i].user
+                  owner_username: data[i].owner_username,
+
                 }
               }
             });
