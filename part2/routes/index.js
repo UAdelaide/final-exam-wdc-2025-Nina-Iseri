@@ -10,4 +10,8 @@ router.get('/', (req, res, next) => {
     res.redirect(`/${role}-dashboard`);
 });
 
+router.get('/', (req, res, next) => {
+    res.render('owner')
+})
+
 module.exports = router;
