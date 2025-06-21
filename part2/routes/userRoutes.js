@@ -51,7 +51,8 @@ router.post('/logout', async (req, res) => {
 
 // GET all dogs of a user
 router.post('/my-dogs', async (req, res) => {
-  
+  const user_id = req.session.user_id;
+  id 
 });
 
 // POST login
