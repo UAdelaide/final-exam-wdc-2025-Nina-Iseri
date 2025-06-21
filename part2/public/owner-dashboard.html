@@ -22,11 +22,10 @@
         <form @submit.prevent="submitWalkRequest">
           <div class="mb-3">
             <label class="form-label">Select Your Dog</label>
-            <select name='' v-model="form.dog_name">
+            <select name='' v-model="form.dog_id">
               <option disabled value="">-- Choose a dog --</option>
               <option v-for="dog in dogs" :value="dog.dog_id">{{dog.name}}</option>
             </select>
-            <input v-model="form.dog_id" type="number" class="form-control" required>
           </div>
           <div class="mb-3">
             <label class="form-label">Requested Date & Time</label>
