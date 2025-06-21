@@ -44,9 +44,9 @@ router.post('/logout', async (req, res) => {
     }
     res.clearCookie('username');
     res.clearCookie('role');
+    res.send(200);
   });
-  try {
-  }
+
 });
 
 // POST login
