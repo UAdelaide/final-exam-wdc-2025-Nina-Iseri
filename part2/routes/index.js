@@ -4,10 +4,10 @@ const router = express.Router();
 // GET home page
 router.get('/', (req, res, next) => {
     let role = req.session.role || '';
-    if (!user_id.length) {
+    if (!role.length) {
         res.render('index');
     }
-    
+    res.redirect()
 });
 
 module.exports = router;
