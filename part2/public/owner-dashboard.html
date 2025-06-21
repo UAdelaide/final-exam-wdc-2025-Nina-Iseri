@@ -24,7 +24,7 @@
             <label class="form-label">Select Your Dog</label>
             <select name='' v-model="form.dog_id" class="form-control" required>
               <option disabled value="">-- Choose a dog --</option>
-              <option v-for="dog in dogs" :value="dog.dog_id">{{dog.name}}</option>
+              <option v-for="dog in dogs" :value=dog.dog_id>{{dog.name}}</option>
             </select>
           </div>
           <div class="mb-3">
@@ -75,7 +75,6 @@
     createApp({
       setup() {
         const form = ref({
-          dog_name: '',
           dog_id: '',
           requested_time: '',
           duration_minutes: '',
