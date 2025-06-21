@@ -165,3 +165,8 @@ section {
     margin: auto;
     text-align: center;
 }
+
+#dog-list {
+    width: 600px;
+    margin: auto;
+}
