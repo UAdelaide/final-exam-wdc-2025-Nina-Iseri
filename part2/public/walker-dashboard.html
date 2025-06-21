@@ -50,8 +50,8 @@
         async function getCurrentUser() {
           try {
             await fetch('/api/users/me')
-            .then((res) => res.data())
-            .then((user_id) => {
+            .then((res) => res.json())
+            .then((data) => {
               user = Number(user_id);
             })
           } catch (err) {
