@@ -50,7 +50,10 @@
         async function getCurrentUser() {
           try {
             await fetch('/api/users/me')
-            .then()
+            .then((res) => res.data())
+            .then((user_id) => {
+              user = user_id;
+            })
 
           }
         }
