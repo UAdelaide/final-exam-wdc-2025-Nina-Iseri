@@ -175,7 +175,7 @@ function downvote(index) {
 
 $('#login').on('submit', function() {
     login();
-    alert()
+    alert('ah');
     return true;
 });
 
