@@ -38,6 +38,11 @@ router.get('/me', (req, res) => {
 
 // POST logout
 router.post('/logout', async (req, res) => {
+  req.session.destroy(err => {
+    if (err) {
+      
+    }
+  });
   try {
     res.clearCookie('username');
     res.clearCookie('role');
