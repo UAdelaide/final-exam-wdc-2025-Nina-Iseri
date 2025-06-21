@@ -207,6 +207,16 @@ function logout(){
     // Create AJAX Request
     var xmlhttp = new XMLHttpRequest();
 
+    // Define function to run on response
+    xmlhttp.onreadystatechange = async function() {
+        if (this.readyState == 4 && this.status == 200) {
+            let res = JSON.parse(this.response);
+            alert('Welcome ' + res.user.username);
+            window.location.href = `/${res.user.role}-dashboard.html`;
+        } else if (this.readyState == 4 && this.status >= 400) {
+            alert("Login failed");
+        }
+    };
     // Open connection to server & send the post data using a POST request
     xmlhttp.open("POST", "/api/users/logout", true);
     xmlhttp.send();
