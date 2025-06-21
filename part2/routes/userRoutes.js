@@ -73,6 +73,8 @@ router.post('/login', async (req, res) => {
   }
 });
 
+router.get('/')
+
 router.get('/redirect', async(req, res) => {
   console.log('redirecting');
   let role = req.session.role || '';
