@@ -11,7 +11,11 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/', (req, res, next) => {
-    res.render('owner')
-})
+    res.render('owner-dashboard');
+});
+
+router.get('/')
+
+
 
 module.exports = router;
