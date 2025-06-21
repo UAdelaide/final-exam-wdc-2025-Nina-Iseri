@@ -63,7 +63,9 @@ router.post('/login', async(req, res) => {
   }
 });
 
-router.get('/owner-dashboard', )
+router.get('/owner-dashboard', async(req, res) => {
+  res.render('owner-dashboard');
+});
 
 // // POST login (dummy version)
 // router.post('/login', async (req, res) => {
