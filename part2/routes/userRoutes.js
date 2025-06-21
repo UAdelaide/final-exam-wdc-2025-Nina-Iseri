@@ -64,7 +64,7 @@ router.post('/my-dogs', async (req, res) => {
     `, [user_id]);
     res.json(rows);
   } catch (err) {
-    
+    return res.status(500).
   }
 });
 
