@@ -56,8 +56,10 @@ router.post('/login', async(req, res) => {
     res.cookie('role', rows[0].role);
     req.session.user_id = rows[0].user_id;
 
-    req.session.save(
-      
+    req.session.save( (err) => {
+      return res.
+    }
+
     );
     res.status(200).send(rows[0].role);
   } catch (err) {
