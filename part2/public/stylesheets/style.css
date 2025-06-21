@@ -160,7 +160,11 @@ section {
     height: auto;
 }
 
-.
+.login-container {
+    width: 400px;
+    display: block;
+    
+}
 
 .dog-list-container {
     display: block;
