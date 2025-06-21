@@ -66,7 +66,8 @@
                   owner: data[i].owner_username,
                   imageUrl: ''
                 };
-                await fetch('')
+                await fetch('https://dog.ceo/api/breeds/image/random')
+                .then((res))
               }
             });
           } catch (err) {
