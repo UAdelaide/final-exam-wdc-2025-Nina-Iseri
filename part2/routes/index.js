@@ -14,7 +14,7 @@ router.get('/owner-dashboard', (req, res, next) => {
     res.render('owner-dashboard');
 });
 
-router.get('/', (req, res, next) => {
+router.get('/walker-dashboard', (req, res, next) => {
     res.render('walker-dashboard');
 });
 
