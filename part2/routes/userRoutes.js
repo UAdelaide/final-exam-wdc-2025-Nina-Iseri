@@ -73,24 +73,6 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// router.get('/owner-dashboard', async (req, res) => {
-//   let role = req.session.role || '';
-//   console.log("role: "+role);
-//   if (role !== 'owner') {
-//     return res.redirect('/');
-//   }
-//   res.render('owner-dashboard');
-// });
-
-// router.get('/walker-dashboard', async (req, res) => {
-//   let role = req.session.role || '';
-//   console.log("role: "+role);
-//   if (role !== 'walker') {
-//     return res.redirect('/');
-//   }
-//   res.render('walker-dashboard');
-// });
-
 // // POST login (dummy version)
 // router.post('/login', async (req, res) => {
 //   const { email, password } = req.body;
