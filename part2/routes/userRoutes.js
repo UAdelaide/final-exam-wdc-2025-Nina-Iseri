@@ -62,9 +62,9 @@ router.post('/my-dogs', async (req, res) => {
       FROM Dogs
       WHERE owner_id = ?
     `, [user_id]);
-    res
+    res.json(rows);
   } catch (err) {
-
+    
   }
 });
 
