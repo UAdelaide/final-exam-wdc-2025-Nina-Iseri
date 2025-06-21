@@ -37,7 +37,7 @@ router.get('/me', (req, res) => {
 });
 
 // POST login
-router.post('/login', async(req, res) => {
+router.post('/login', async (req, res) => {
   const { user, pass } = req.body;
   const maxAge = 86400000;
 
@@ -52,7 +52,7 @@ router.post('/login', async(req, res) => {
     }
 
     // Store login status in session
-    res.cookie('username', rows[0].username);
+    res.cookie('username', rows[0].username, {maxAge});
     res.cookie('role', rows[0].role);
     req.session.user_id = rows[0].user_id;
 
