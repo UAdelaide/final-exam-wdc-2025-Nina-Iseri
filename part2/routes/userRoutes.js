@@ -53,8 +53,10 @@ router.post('/logout', async (req, res) => {
 router.post('/my-dogs', async (req, res) => {
   const user_id = Number(req.session.user_id) || 0;
   if (!user_id) {
-    res.status(500).json({ error: 'Not logged in' });
+    return res.status(500).json({ error: 'Not logged in' });
   }
+
+  try 
 });
 
 // POST login
