@@ -16,6 +16,20 @@ app.use(session({
     cookie: { maxAge: 86400000 }
 }));
 
+// Route to return list of all dogs
+app.get('/api/dogs', async (req, res) => {
+    try {
+        const [dogs] = await db.execute(`
+            SELECT name AS dog_name, size, username AS owner_username
+            FROM Dogs INNER JOIN Users ON Dogs.owner_id = Users.user_id
+        `);
+        res.json(dogs);
+    } catch (err) {
+        res.status(500).json({ error: 'Failed to fetch dogs'});
+    }
+});
+
+
 // Routes
 const indexRoutes = require('./routes/index');
 const walkRoutes = require('./routes/walkRoutes');
