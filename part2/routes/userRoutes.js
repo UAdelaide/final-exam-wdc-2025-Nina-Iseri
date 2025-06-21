@@ -78,7 +78,7 @@ router.get('/redirect', async(req, res) => {
   if (!role.length) {
     return res.redirect('/');
   }
-  res.redirect(`/${role}-dashboard`);
+  res.redirect(`localho/${role}-dashboard`);
 });
 
 // // POST login (dummy version)
