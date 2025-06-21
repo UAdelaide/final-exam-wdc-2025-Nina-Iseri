@@ -11,7 +11,7 @@ router.get('/', (req, res, next) => {
     res.redirect(`/${role}-dashboard`);
 });
 
-router.get('/owner-dashboard', (req, res, next) => {
+router.get('redirect/owner-dashboard', (req, res, next) => {
     res.render('owner-dashboard');
 });
 
