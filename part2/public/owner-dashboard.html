@@ -88,7 +88,8 @@
 
         async function loadDogs() {
           try {
-            await fetch('/api/users/my-dogs')
+            const res = await fetch('/api/users/my-dogs')
+            await fetch()
             .then((res) => res.json())
             .then((data) => {
               dogs = data;
