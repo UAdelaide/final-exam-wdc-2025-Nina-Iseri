@@ -37,7 +37,9 @@ router.get('/me', (req, res) => {
 });
 
 // POST logout
-router.post()
+router.post('/logout', async (req, res) => {
+  
+});
 
 // POST login
 router.post('/login', async (req, res) => {
