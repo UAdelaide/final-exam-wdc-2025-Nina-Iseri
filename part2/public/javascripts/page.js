@@ -188,7 +188,6 @@ function login(){
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             alert("Welcome "+this.responseText);
-            window.location.href('')
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
         }
