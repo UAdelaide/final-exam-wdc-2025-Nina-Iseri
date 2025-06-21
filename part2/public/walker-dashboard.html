@@ -52,7 +52,7 @@
             await fetch('/api/users/me')
             .then((res) => res.json())
             .then((data) => {
-              user = Number(user_id);
+              user = Number(data.user);
             })
           } catch (err) {
             console.error('Error: ', err);
