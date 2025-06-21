@@ -57,8 +57,9 @@ router.post('/login', async(req, res) => {
     req.session.user_id = rows[0].user_id;
 
     req.session.save( (err) => {
-      return res.status(500).json({ error: 'Error saving sessions' });
-    }
+      if (err) {
+        return res.status(500).json({ error: 'Error saving sessions' });
+      }
       res.status(200).json({
         
       });
