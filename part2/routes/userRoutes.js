@@ -82,16 +82,7 @@ router.get('/owner-dashboard', async (req, res) => {
   res.render('owner-dashboard');
 });
 
-router.get('/redirect', async(req, res) => {
-  console.log('redirecting');
-  let role = req.session.role || '';
-  console.log(role);
-  if (!role.length) {
-    console.log('redirected');
-    return res.redirect('/');
-  }
-  res.redirect(`localhost:8080/${role}-dashboard`);
-});
+router.get('/')
 
 // // POST login (dummy version)
 // router.post('/login', async (req, res) => {
