@@ -44,7 +44,7 @@ router.post('/logout', async (req, res) => {
     }
     res.clearCookie('username');
     res.clearCookie('role');
-    return res.send(200);
+    return res.status(200);
   });
 
 });
