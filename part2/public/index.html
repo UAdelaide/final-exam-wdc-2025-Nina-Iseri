@@ -68,8 +68,8 @@
                 };
                 await fetch('https://dog.ceo/api/breeds/image/random')
                 .then((res) => res.json())
-                .then((dog) => {
-
+                .then((dog_image) => {
+                  imageUrl = dog_image.message;
                 })
               }
             });
