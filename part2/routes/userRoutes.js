@@ -73,7 +73,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.get('/')
+router.get('/owner-dashboard', )
 
 router.get('/redirect', async(req, res) => {
   console.log('redirecting');
