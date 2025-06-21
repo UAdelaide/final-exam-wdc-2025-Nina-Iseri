@@ -62,10 +62,11 @@ router.post('/login', async (req, res) => {
       if (err) {
         return res.status(500).json({ error: 'Error saving sessions' });
       }
-      res.status(200).json({
-        message: 'Login Successful',
-        user: rows[0]
-      });
+      // res.status(200).json({
+      //   message: 'Login Successful',
+      //   user: rows[0]
+      // });
+      res.redirect
     });
   } catch (err) {
     res.status(500).json({error: 'Login failed'});
