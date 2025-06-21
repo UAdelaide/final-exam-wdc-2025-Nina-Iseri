@@ -59,6 +59,7 @@ router.post('/login', async(req, res) => {
     // res.status(200).send(rows[0].username);
     res.redirect('/owner-dashboard');
   } catch (err) {
+    console.log(err);
     res.status(500).json({error: 'Login failed'});
   }
 });
