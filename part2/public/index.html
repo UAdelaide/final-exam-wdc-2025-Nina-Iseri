@@ -61,11 +61,12 @@
             .then((data) => {
               for (let i = 0; i < data.length; ++i) {
                 let dog = {
-                  dog_name: data[i].dog_name,
+                  name: data[i].dog_name,
                   size: data[i].size,
-                  owner_username: data[i].owner_username,
-
-                }
+                  owner: data[i].owner_username,
+                  imageUrl: ''
+                };
+                
               }
             });
           } catch (err) {
