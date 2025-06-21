@@ -5,8 +5,9 @@ const router = express.Router();
 router.get('/', (req, res, next) => {
     let user_id = req.session.user_id || '';
     if (!user_id.length) {
-        res.render()
+        res.render('index');
     }
+    
 });
 
 module.exports = router;
