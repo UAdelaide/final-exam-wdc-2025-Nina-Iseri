@@ -72,7 +72,7 @@ router.post('/login', async (req, res) => {
 
 router.get('/redirect', async(req, res) => {
   let role = req.session.role || '';
-  res.render(`${role}-dashboard`);
+  if (!role.length) 
   if ()
 });
 
