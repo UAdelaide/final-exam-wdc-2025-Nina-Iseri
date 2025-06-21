@@ -59,9 +59,10 @@ router.post('/login', async(req, res) => {
     req.session.save( (err) => {
       return res.status(500).json({ error: 'Error saving sessions' });
     }
+    res.status(200).json({
 
+    });
     );
-    res.status(200).send(rows[0].role);
   } catch (err) {
     res.status(500).json({error: 'Login failed'});
   }
