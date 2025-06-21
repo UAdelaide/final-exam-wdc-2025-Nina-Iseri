@@ -92,6 +92,9 @@
           try {
             await fetch()
             .then((res) => res.json())
+            .then((data) => {
+              dogs = data;
+            });
           } catch (err) {
 
           }
