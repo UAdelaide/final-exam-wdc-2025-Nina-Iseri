@@ -75,7 +75,8 @@ router.post('/login', async (req, res) => {
 
 router.get('/owner-dashboard', async (req, res)  {
   let role = req.session.role;
-  
+  console.log("role: "+role);
+  if (!role)
 });
 
 router.get('/redirect', async(req, res) => {
