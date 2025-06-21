@@ -59,7 +59,9 @@
             await fetch('/api/dogs')
             .then((res) => res.json())
             .then((data) => {
-              dogs = data;
+              for (let i = 0; i < data.length; ++i) {
+                
+              }
             });
           } catch (err) {
             console.error('Error: ', err);
