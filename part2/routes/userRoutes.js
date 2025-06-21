@@ -52,8 +52,8 @@ router.post('/login', async (req, res) => {
     }
 
     // Store login status in session
-    res.cookie('username', rows[0].username, {maxAge});
-    res.cookie('role', rows[0].role);
+    res.cookie('username', rows[0].username, { maxAge });
+    res.cookie('role', rows[0].role, { maxAge });
     req.session.user_id = rows[0].user_id;
 
     req.session.save( (err) => {
