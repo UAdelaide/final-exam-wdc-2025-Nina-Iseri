@@ -59,7 +59,7 @@
             await fetch('/api/dogs')
             .then((res) => res.json())
             .then((data) => {
-              
+              dogs = data;
             });
           } catch (err) {
             console.error('Error: ', err);
