@@ -38,13 +38,13 @@ router.get('/me', (req, res) => {
 
 // POST logout
 router.post('/logout', async (req, res) => {
-  req.session.destroy(err => {
+  req.session.destroy((err) => {
     if (err) {
       return res.status(500).json({ error: 'Unable to log out'});
     }
     res.clearCookie('username');
     res.clearCookie('role');
-    res.send(200);
+    return res.send(200);
   });
 
 });
