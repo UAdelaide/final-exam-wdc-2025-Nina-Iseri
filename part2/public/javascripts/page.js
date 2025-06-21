@@ -186,7 +186,7 @@ async function login() {
     // Define function to run on response
     xmlhttp.onreadystatechange = async function() {
         if (this.readyState == 4 && this.status == 200) {
-            let res = JSON.parse(this.response.user);
+            let res = JSON.parse(this.response);
             alert('Welcome' + res.username);
             // window.location.href = `/${res.role}-dashboard`;
         } else if (this.readyState == 4 && this.status >= 400) {
