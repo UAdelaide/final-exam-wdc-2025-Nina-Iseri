@@ -12,9 +12,8 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/redirect', (req, res, next) => {
+    let role = req.session.role || '';
     res.render('owner-dashboard');
-});\
-
-
+});
 
 module.exports = router;
